@@ -1,0 +1,93 @@
+.the-add-schedule-form {
+  $this: &;
+
+  padding: 5px 15px 15px;
+  box-sizing: border-box;
+
+  @media (max-width: 600px) {
+    padding: 5px 0 15px;
+  }
+
+  &__field {
+    margin-bottom: 8px;
+  }
+
+  &__field-day {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    padding: 8px 30px;
+    margin: 0 -30px;
+    box-sizing: border-box;
+
+    @media (max-width: 600px) {
+      margin: 0 -15px;
+      padding: 12px 15px;
+    }
+
+    &:nth-child(even) {
+      background: $main-bg;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__field-label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    color: $text-gray;
+    margin-top: 0;
+    margin-right: 5px;
+    min-width: 35px;
+    text-transform: capitalize;
+  }
+
+  &__field-time {
+    flex: 1;
+    margin-right: 8px;
+    position: relative;
+
+    #{$this}__field-label {
+      margin-top: 0;
+      padding-left: 8px;
+    }
+
+    &.isClosed:before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $light-75;
+    }
+  }
+
+  &__field-closed {
+    flex: 1;
+  }
+
+  &__controls {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__field-time-checks {
+    flex: 0 0 88px;
+
+    .the-checkbox {
+      margin-top: 7px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

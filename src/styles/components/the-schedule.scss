@@ -1,0 +1,105 @@
+.the-schedule {
+  .the-headline {
+    margin-bottom: 0;
+  }
+
+  &__headline {
+    display: flex;
+    align-content: center;
+    margin-bottom: 6px;
+  }
+
+  &__headline-status {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  &__headline-status-text {
+    font-size: 14px;
+    color: $text-gray;
+    margin-right: 10px;
+  }
+
+  &__headline-status-highlight {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    &.open {
+      background: $green;
+    }
+
+    &.close {
+      background: $red;
+    }
+  }
+
+  &__description {
+    font-size: 15px;
+    color: $text-gray;
+    margin: 0 0 30px;
+  }
+
+  &__list {
+    margin: 0 -30px 30px;
+    box-sizing: border-box;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    height: 50px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: $text-gray;
+
+    &:nth-child(odd) {
+      background: $main-bg;
+    }
+  }
+
+  &__day-label {
+    flex: 1;
+    padding-right: 15px;
+    text-align: right;
+  }
+
+  &__day-value {
+    flex: 1;
+  }
+
+  &__closed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0 60px;
+  }
+
+  &__closed-icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  &__closed-description {
+    margin: 12px 0 0;
+    font-size: 15px;
+    color: $text-gray;
+    font-weight: 700;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+}

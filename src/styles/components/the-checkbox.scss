@@ -1,0 +1,47 @@
+.the-checkbox {
+  $this: &;
+
+  position: relative;
+
+  &__input {
+    display: none;
+
+    &:checked + #{$this}__label #{$this}__check {
+      border-color: $green;
+      background-color: $green;
+
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: $text-gray;
+    font-size: 14px;
+  }
+
+  &__check {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $white;
+    border: 1px solid $border-gray;
+    border-radius: 3px;
+    margin-right: 8px;
+    transition: border-color .1s ease-in-out, background-color .1s ease-in-out;
+
+    svg {
+      opacity: 0;
+      width: 14px;
+      height: 14px;
+      fill: $white;
+      transition: opacity .1s ease-in-out;
+    }
+  }
+}

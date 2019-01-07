@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "es6",
+        "jsx": "react",
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "outDir": "./",
+        "strict": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "Node",
+        "keyofStringsOnly": true,
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "baseUrl": "./src"
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "src/tests"
+    ]
+}

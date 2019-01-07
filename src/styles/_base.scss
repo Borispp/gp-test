@@ -1,0 +1,30 @@
+/*
+Application Settings Go Here
+------------------------------------
+This file acts as a bundler for all variables/mixins/themes, so they
+can easily be swapped out without `core.scss` ever having to know.
+
+For example:
+
+@import './variables/colors';
+@import './variables/components';
+@import './themes/default';
+*/
+@import './includes/variables';
+@import './includes/colors';
+@import './includes/typography';
+@import './includes/mixins';
+@import './includes/rodal-dialog';
+@import './includes/react-time';
+
+@import './components/the-home-page';
+@import './components/the-header';
+@import './components/the-loading-icon';
+@import './components/the-schedule-page';
+@import './components/the-headline';
+@import './components/the-schedules';
+@import './components/the-schedule';
+@import './components/the-button';
+@import './components/the-add-schedule-form';
+@import './components/the-input';
+@import './components/the-checkbox';

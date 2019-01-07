@@ -1,0 +1,26 @@
+.the-header {
+  $this: &;
+
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $blue;
+
+  &__logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    transition: transform .2s ease-in-out;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  &:hover {
+    #{$this}__logo {
+      transform: scale(1.2);
+    }
+  }
+}

@@ -1,0 +1,116 @@
+.the-schedules {
+  $this: &;
+
+  h1.the-headline {
+    text-align: center;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 40px;
+
+    h2.the-headline {
+      font-size: 16px;
+      margin: 12px 0 0;
+    }
+  }
+
+  &__empty-description {
+    font-size: 15px;
+    margin: 5px 0 0;
+  }
+
+  &__empty-icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  &__list {
+    margin: 0 -30px 30px;
+    box-sizing: border-box;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: stretch;
+    padding: 0 30px;
+    height: 50px;
+    box-sizing: border-box;
+
+    &:nth-child(odd) {
+      background: $main-bg;
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    flex: 1;
+    color: $blue;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color .15s ease-in-out;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  &__headline-status-highlight {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+    &.open {
+      background: $green;
+    }
+
+    &.close {
+      background: $red;
+    }
+  }
+
+  &__list-remove {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: $red;
+    cursor: pointer;
+    transition: color .15s ease-in-out;
+
+    &:hover {
+      color: $red-hover;
+
+      #{$this}__list-remove-icon {
+        fill: $red-hover;
+      }
+    }
+  }
+
+  &__list-remove-icon {
+    fill: $red;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    transition: fill .15s ease-in-out;
+  }
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0 40px;
+  }
+}
