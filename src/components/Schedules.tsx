@@ -72,7 +72,7 @@ class SchedulesComponent extends PureComponent<SchedulesMapProps & SchedulesDisp
 
   private deleteStoreSchedule = (id: string) => (): void => {
     db.ref(`schedules/${id}`).remove();
-  }
+  };
 
   public render(): JSX.Element {
     const { schedules } = this.props;
